@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>JS input en output</title>
+</head>
+
+<body>
+<p id="helloText">Klik op de knop om uw recept in te voeren. </p>
+<button id="knop">klik hier</button>
+
+<script> 
+var myButton = document.getElementById("knop");
+var myText = document.getElementById("helloText");
+
+myButton.addEventListener('click', ingrediënten, false);
+
+function ingrediënten() {
+	var recept1 = prompt("Typ hier u  eerste recepten.");
+	window.alert("Is dit u eerste recept: "+recept1 +".");
+	var recept2 = prompt ("Typ hier u tweede recept.");
+	window.alert("Is dit u tweede recept: " +recept2 +".");
+	var bereiding = prompt("Wilt u de recepten koken, bakken, mixen of braden?");
+	window.alert("Weet u zeker dat u de recepten wilt " + bereiding +".");
+    var duur = prompt("Hoeveel minuten wilt u uw recepten " +bereiding +"?");
+    window.alert("Is dit echt u bereidingstijd: " + duur +" minuten.");
+    window.alert("U moet uw twee recepten " +"(" +recept1 +" en " +recept2 +") " + duur +" minuten " +bereiding +".");
+}
+</script>
+</body>
+</html>
